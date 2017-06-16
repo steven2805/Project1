@@ -27,6 +27,11 @@ class Offer
     result = SqlRunner.run(sql)
     return result.map { |hash| Offer.new(hash)}
   end 
+
+  def self.delete_all
+    sql = "DELETE FROM offers"
+    Sqlrunner.run(sql)
+  end 
 end 
 
 

@@ -25,6 +25,11 @@ class Dealer
     return results.map{ |hash| Dealer.new( hash )} 
   end 
 
+  def self.delete_all 
+    sql = "DELETE FROM dealers"
+    SqlRunner.run(sql)
+  end 
+
 
 
 
