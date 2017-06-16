@@ -11,7 +11,7 @@ class Car
     @model = options['model']
     @category = options['category']
     @price = options['price']
-    @dealer_id = options['dealer_id']
+    @dealer_id = options['dealer_id'].to_i
   end 
 
   def save()
@@ -33,6 +33,12 @@ class Car
     sql = "DELETE FROM cars"
     SqlRunner.run(sql)
   end 
+
+  def self.find_dealer_cars(id)
+    sql = "SELECT * FROM cars WHERE dealer_id =#{id}"
+    results = SqlRunner.run( sql )
+    return results.map {|car| Car.new(car)}
+  end
 
 end 
 

@@ -89,7 +89,7 @@ offer1 = Offer.new({
   })
 
 offer2 = Offer.new({
-  'name' => "Decent Car Monday 10% off",
+  'name' => "#{car3.make}" + " #{car3.model}  10% off",
   'value' => 10,
   'day' => "Monday",
   'car_id' => car3.id,
@@ -97,7 +97,7 @@ offer2 = Offer.new({
   })
 
 offer3 = Offer.new({
-  'name' => "Everywhere sale 10%",
+  'name' => "#{car5.make}" + " #{car5.model}  Sale massive 24% off",
   'value' => 10,
   'day' => "Tuesday",
   'car_id' => car5.id,
@@ -106,7 +106,7 @@ offer3 = Offer.new({
 
 
 
-
+Car.find_dealer_cars(47)
 
 offer1.save
 offer2.save 

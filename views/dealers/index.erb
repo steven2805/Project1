@@ -1,0 +1,38 @@
+<h1>Rental Dealerships</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>location</th>
+    <th></th>
+  
+  </tr>
+  <% for dealer in @dealers %>
+  <tr>
+    <td><%= dealer.name %></td>
+
+    <td>|</td>
+
+    <td><%= dealer.address %></td>
+
+    <td>|</td>
+
+    <td><form method="get" action="/">
+    <button type="submit">List vehicles</button>
+</form></td>
+
+  </tr>
+  <% end %>
+
+
+
+</table>
+
+
+
+
+
+
+
+
