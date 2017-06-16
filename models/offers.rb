@@ -22,12 +22,6 @@ class Offer
     @id = result.first['id'].to_i 
   end
 
-  def self.all()
-    sql ="SELECT * FROM offers"
-    result = SqlRunner.run(sql)
-    return result.map { |hash| Offer.new(hash)}
-  end 
-
   def self.delete_all()
     sql = "DELETE FROM offers"
     SqlRunner.run(sql)
