@@ -30,7 +30,7 @@ class Offer
 
   def self.delete_all
     sql = "DELETE FROM offers"
-    Sqlrunner.run(sql)
+    SqlRunner.run(sql)
   end 
 end 
 

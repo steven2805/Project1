@@ -1,0 +1,47 @@
+<h1>Hot Deals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Day</th>
+    <th></th>
+    <th>Offer amount</th>
+  </tr>
+  <% for offer in @offers %>
+  <tr>
+    <td><%= offer.name %></td>
+
+    <td>|</td>
+
+    <td><%= offer.day %></td>
+
+    <td>|</td>
+
+    <td><%= offer.value %>%</td>
+
+    <td>|</td>
+
+    <td><form method="get" action="/">
+    <button type="submit">See this offer </button>
+</form></td>
+
+
+
+
+
+
+  </tr>
+  <% end %>
+
+
+
+</table>
+
+
+
+
+
+
+
+

@@ -3,6 +3,14 @@ require_relative('../models/dealers.rb')
 require_relative('../models/cars.rb')
 require_relative('../models/offers.rb')
 
+Offer.delete_all
+Car.delete_all 
+Dealer.delete_all 
+
+
+
+
+
 
 dealer1 = Dealer.new({
   'name' => "Decent cars",
@@ -73,7 +81,7 @@ car5.save
 car6.save
 
 offer1 = Offer.new({
-  'name' => "Decent Car Sunday 10% off",
+  'name' => "#{car1.make}" + " #{car1.model} 10% off day",
   'value' => 10,
   'day' => "Sunday",
   'car_id' => car1.id,
