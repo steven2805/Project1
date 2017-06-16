@@ -2,9 +2,10 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/dealers.rb' )
 require_relative( '../models/cars.rb')
+require_relative( '../models/general.rb')
 
 get '/dealers' do
-  @dealers = Dealer.all()
+  @dealers = General.all("dealers")
   erb ( :"dealers/index" )
 end
 
