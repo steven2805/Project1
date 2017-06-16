@@ -9,7 +9,7 @@ get '/dealers' do
 end
 
 get '/dealers/:id' do
-  @cars = Car.find_dealer_cars(params['id'])
+  @cars = Car.find_dealer_cars('dealer_id',params['id'])
   erb (:"dealers/dealer_cars")
 end 
 
