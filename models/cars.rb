@@ -35,7 +35,7 @@ class Car
   end 
 
   def self.find_dealer_cars(id)
-    sql = "SELECT * FROM cars WHERE dealer_id =#{id}"
+    sql = "SELECT * FROM cars WHERE dealer_id = #{id}"
     results = SqlRunner.run( sql )
     return results.map {|car| Car.new(car)}
   end
