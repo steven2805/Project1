@@ -14,13 +14,13 @@
     <td><%= dealer.address %></td>
     <td>|</td>
     <td>
-      <form method="get" action="/">
-        <button type="submit">List vehicles</button>
-      </form>
-    </td>
-  </tr>
-  <% end %>
-</table>
+      <form method="get" action="/dealers/<%= dealer.id %>/dealer_cars">
+        <button type="submit"> Check out dealers cars</button>
+        <form/>
+      </td>
+    </tr>
+    <% end %>
+  </table>
 
 
 
