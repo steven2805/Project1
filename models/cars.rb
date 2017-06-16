@@ -14,7 +14,14 @@ class Car
     @dealer_id = options['dealer_id']
   end 
 
-
+  def save()
+    sql = "INSERT INTO cars (make, model, category, price, dealer_id)
+    VALUES 
+    ('#{make}','#{model}','#{category}','#{price}','#{dealer_id}')
+    RETURNING *"
+    result = SqlRunner.run(sql)
+    @id = result.first()['id'].to_i 
+  end
 
 end 
 

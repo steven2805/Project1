@@ -27,7 +27,8 @@ CREATE TABLE offers
   name VARCHAR(255),
   day VARCHAR(255), 
   value INT2,
-  car_id INT8 REFERENCES cars(id)
+  car_id INT8 REFERENCES cars(id),
+  dealers_id INT8 
 );
 
 
