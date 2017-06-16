@@ -29,7 +29,7 @@ class Car
     return result.map {|single_car| Car.new(single_car)}
   end
 
-  def self.delete_all
+  def self.delete_all()
     sql = "DELETE FROM cars"
     SqlRunner.run(sql)
   end 

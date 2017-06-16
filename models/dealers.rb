@@ -19,16 +19,16 @@ class Dealer
     @id = result.first()['id'].to_i
   end
 
-  def self.all 
+  def self.all()
     sql = "SELECT * FROM dealers"
     results = SqlRunner.run(sql)
     return results.map{ |hash| Dealer.new( hash )} 
   end 
 
-  def self.delete_all 
+  def self.delete_all()
     sql = "DELETE FROM dealers"
     SqlRunner.run(sql)
-  end 
+  end
 
 
 

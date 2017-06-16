@@ -106,7 +106,7 @@ offer3 = Offer.new({
 
 
 
-Car.find_dealer_cars(47)
+
 
 offer1.save
 offer2.save 
