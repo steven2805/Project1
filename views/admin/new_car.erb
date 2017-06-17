@@ -1,0 +1,40 @@
+<h2>Add new car to database</h2>
+<form method="POST" action="/admin">
+
+
+  <label for="make">Make:</label>
+  <input type="text" name="make" id="make"/>
+
+
+  <label for="model">Model:</label>
+  <input type="text" name="model" id="model"/>
+
+  <label for="category">Category:</label> 
+  <select name="category" id="category">
+    <option value="suv">SUV</option>
+    <option value="hatchback">Hatchback</option>
+  </select>
+
+  <label for="price">Price:</label>
+  <input type="text" name="price" id="price"/>
+
+  <label for="available">Available:</label> 
+  <select name="available" id="available">
+    <option value="true">Available for rent</option>
+    <option value="false">Unavailable</option>
+  </select>
+
+
+  <label for="dealer_select">Select Dealer:</label> 
+  <select name="dealer_id" id="dealer_select">
+    <% @dealers.each do |dealer| %>
+    <option value=<%= dealer.id %>><%= dealer.name.capitalize %></option>
+    <% end %>
+  </select>
+
+
+  <input type="submit" value="Add new car"/>
+
+
+
+</form>
