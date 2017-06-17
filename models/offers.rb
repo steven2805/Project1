@@ -22,10 +22,6 @@ class Offer
     @id = result.first['id'].to_i 
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM offers"
-    SqlRunner.run(sql)
-  end 
 end 
 
 

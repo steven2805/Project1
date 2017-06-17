@@ -15,10 +15,12 @@
     <td>|</td>
     <td><%= offer.value %>%</td>
     <td>|</td>
+    <td><%= offer.car_id %></td>
+    <td>|</td>
     <td>
-    <form method="get" action="/">
-      <button type="submit">See this offer </button>
-    </form>
+    <form method="get" action="../cars/specific/ <%= offer.car_id %>">
+        <button type="submit"> Check out car offer </button>
+        <form/>
   </td>
 </tr>
 <% end %>

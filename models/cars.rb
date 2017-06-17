@@ -14,8 +14,6 @@ class Car
     @dealer_id = options['dealer_id'].to_i
   end 
 
-
-
   def save()
     sql = "INSERT INTO cars (make, model, category, price, dealer_id)
     VALUES 
@@ -24,17 +22,6 @@ class Car
     result = SqlRunner.run(sql)
     @id = result.first()['id'].to_i 
   end
-
-  def self.all()
-    sql = "SELECT * from cars"
-    result = SqlRunner.run(sql)
-    return result.map {|single_car| Car.new(single_car)}
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM cars"
-    SqlRunner.run(sql)
-  end 
 
   def self.find_dealer_cars(looking_for,id)
     sql = "SELECT * FROM cars WHERE #{looking_for} = #{id}"

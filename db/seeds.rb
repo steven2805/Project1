@@ -2,14 +2,11 @@ require('pry')
 require_relative('../models/dealers.rb')
 require_relative('../models/cars.rb')
 require_relative('../models/offers.rb')
+require_relative('../models/general.rb')
 
-Offer.delete_all
-Car.delete_all 
-Dealer.delete_all 
-
-
-
-
+General.delete_all("offers")
+General.delete_all("cars")
+General.delete_all("dealers")
 
 
 dealer1 = Dealer.new({
@@ -103,9 +100,6 @@ offer3 = Offer.new({
   'car_id' => car5.id,
   'dealers_id' => car5.dealer_id
   })
-
-
-
 
 
 offer1.save
