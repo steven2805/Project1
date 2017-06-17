@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/cars.rb')
+require_relative('../models/dealers.rb')
 
 get '/admin' do
   erb ( :'admin/index')
@@ -12,7 +13,7 @@ end
 
 post '/add_dealer' do
   Dealer.new(params).save
- redirect to '/admin'
+  redirect to '/admin'
 end
 
 get '/admin/new_car' do
@@ -21,17 +22,28 @@ get '/admin/new_car' do
 end
 
 post '/add_car' do
+  params['make'].capitalize
   Car.new(params).save
   redirect to '/admin'
 end
 
-get '/admin/add_offer' do
+get '/admin/new_offer' do
+  @cars = General.all('cars',"Car") 
   @dealers = General.all('dealers','Dealer')
-  @car - General.all('cars',"Car")
+  
   erb(:'admin/new_offer')
 end
 
-post '/admin/add_offer' do
+post '/add_offer' do
+  tempholding = params["car_id"]
+  originalname = params['name']
+  carz = Car.find('id', tempholding )
+  makeholding = carz.first.make
+  modelholding = carz.first.model 
+  finalholding = "#{makeholding} #{modelholding}"
+  params['name'] = "#{finalholding} #{originalname}"
+  params.delete('captures')
+  params['dealers_id'] = carz.first.dealer_id.to_i
   Offer.new(params).save
   redirect to '/admin'
 end
