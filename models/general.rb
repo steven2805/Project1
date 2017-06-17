@@ -15,4 +15,9 @@ class General
     SqlRunner.run(sql)
   end 
 
+  def self.delete_with_id(database_name,id)
+    sql = "DELETE FROM #{database_name} WHERE id = #{id}"
+    SqlRunner.run(sql)
+  end 
+
 end 

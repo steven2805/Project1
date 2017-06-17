@@ -7,6 +7,12 @@ get '/admin' do
   erb ( :'admin/index')
 end
 
+
+get '/admin/edit_cars' do
+  @dealers = General.all('dealers','Dealer')
+  erb ( :'admin/edit_car')
+end
+
 get '/admin/new_dealer' do
   erb(:'admin/new_dealer')
 end
