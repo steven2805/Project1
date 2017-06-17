@@ -18,6 +18,7 @@ CREATE TABLE cars
   model VARCHAR(255),
   category VARCHAR(255),
   price INT8,
+  available BOOLEAN,
   dealer_id INT8 REFERENCES dealers(id)
 );
 

@@ -27,6 +27,7 @@ car1 = Car.new({
   'model' => "Capri",
   'category' => "Vintage",
   'price' => 67,
+  'available' => true,
   'dealer_id' => dealer1.id
  })
 
@@ -35,6 +36,7 @@ car2 = Car.new({
   'model' => "Ka",
   'category' => "Compact",
   'price' => 25,
+  'available' => true,
   'dealer_id' => dealer1.id
  })
 
@@ -43,6 +45,7 @@ car3 = Car.new({
   'model' => "RX8",
   'category' => "Sport",
   'price' => 70,
+  'available' => true,
   'dealer_id' => dealer1.id
  })
 
@@ -51,6 +54,7 @@ car4 = Car.new({
   'model' => "RX8",
   'category' => "Sport",
   'price' => 82,
+  'available' => true,
   'dealer_id' => dealer2.id
  })
 
@@ -59,6 +63,7 @@ car5 = Car.new({
   'model' => "XV",
   'category' => "SUV",
   'price' => 49,
+  'available' => true,
   'dealer_id' => dealer2.id
  })
 
@@ -67,6 +72,7 @@ car6 = Car.new({
   'model' => "M3",
   'category' => "Sport",
   'price' => 110,
+  'available' => true,
   'dealer_id' => dealer2.id
  })
 
