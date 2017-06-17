@@ -9,7 +9,9 @@ get '/dealers' do
   erb ( :"dealers/index" )
 end
 
-get '/dealers/:id' do
+# Find all cars for a specific dealer
+
+get '/dealers/:id/' do
   @cars = Car.find_dealer_cars('dealer_id',params['id'])
   erb (:"dealers/dealer_cars")
 end 

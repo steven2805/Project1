@@ -17,13 +17,19 @@
     <td>|</td>
     <td><%= offer.car_id %></td>
     <td>|</td>
+
+
+    <% car_id = offer.car_id %>
     <td>
-    <form method="get" action="../cars/specific/ <%= offer.car_id %>">
+      <form method="get" action="/cars/<%= car_id %>">
         <button type="submit"> Check out car offer </button>
-        <form/>
-  </td>
-</tr>
-<% end %>
-</table>
+      </form>
+    </td>
+
+
+
+    </tr>
+    <% end %>
+  </table>
 
 
