@@ -7,6 +7,8 @@ get '/admin' do
   erb ( :'admin/index')
 end
 
+# used to get the dealer specific cars, used within the delete function
+
 get '/admin/dealer_spec_cars/:id/' do
   @cars = Car.find('dealer_id',params['id'])
   erb (:"admin/dealer_spec_cars")
@@ -16,6 +18,11 @@ post '/admin/car/:id/delete' do
   General.delete_with_id("cars",params['id'])
   redirect to '/admin'
 end
+
+post '/admin/dealer/:id/delete' do
+  General.delete_with_id("dealers",params['id'])
+  redirect to '/admin'
+end 
 
 get '/admin/edit_cars' do
   @dealers = General.all('dealers','Dealer')
