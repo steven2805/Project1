@@ -24,6 +24,7 @@
   <select name="car_id" id="car_select">
     <% @cars.each do |car| %>
     <option value=<%= car.id %>><%= "#{car.make} #{car.model}".capitalize %></option>
+    else
     <% end %>
   </select>
 

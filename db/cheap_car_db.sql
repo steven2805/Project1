@@ -19,7 +19,7 @@ CREATE TABLE cars
   category VARCHAR(255),
   price INT8,
   available BOOLEAN,
-  dealer_id INT8 REFERENCES dealers(id)
+  dealer_id INT8 REFERENCES dealers(id) ON DELETE CASCADE
 );
 
 CREATE TABLE offers 
@@ -28,7 +28,7 @@ CREATE TABLE offers
   name VARCHAR(255),
   day VARCHAR(255), 
   value INT2,
-  car_id INT8 REFERENCES cars(id),
+  car_id INT8 REFERENCES cars(id) ON DELETE CASCADE,
   dealers_id INT8 
 );
 

@@ -7,6 +7,15 @@ get '/admin' do
   erb ( :'admin/index')
 end
 
+get '/admin/dealer_spec_cars/:id/' do
+  @cars = Car.find('dealer_id',params['id'])
+  erb (:"admin/dealer_spec_cars")
+end 
+
+post '/admin/car/:id/delete' do
+  General.delete_with_id("cars",params['id'])
+  redirect to '/admin'
+end
 
 get '/admin/edit_cars' do
   @dealers = General.all('dealers','Dealer')
