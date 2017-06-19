@@ -6,6 +6,7 @@
     <th>Day</th>
     <th></th>
     <th>Offer amount</th>
+    <th>Check out this offer</th>
   </tr>
   <% for offer in @offers %>
   <tr>
@@ -14,13 +15,11 @@
     <td><%= offer.day %></td>
     <td>|</td>
     <td><%= offer.value %>%</td>
-    <td>|</td>
-    <td><%= offer.car_id %></td>
-    <td>|</td>
+
     <% car_id = offer.car_id %>
     <td>
       <form method="get" action="/cars/<%= car_id %>">
-        <button type="submit"> Check out car offer </button>
+        <input type="submit" value="Check out car offer">
       </form>
     </td>
     </tr>
