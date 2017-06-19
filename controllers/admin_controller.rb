@@ -42,9 +42,10 @@ get '/admin/car/:car_id/edit' do
   erb (:'/admin/edit')
 end
 
-put '/admin/car/:car_id/edit' do
-  car = Car.new(params)
-  car.update
+post '/admin/car/:car_id/edit' do
+  car2 = Car.new(params)
+  puts car2.inspect
+  car2.update
   redirect to '/admin'
 end
 
@@ -94,7 +95,3 @@ post '/add_offer' do
   Offer.new(params).save
   redirect to '/admin'
 end
-
-
-
-

@@ -22,6 +22,12 @@ class Offer
     @id = result.first['id'].to_i 
   end
 
+  def self.find(looking_for,id)
+    sql = "SELECT * FROM offers WHERE #{looking_for} = #{id}"
+    results = SqlRunner.run( sql )
+    return results.map {|offer| Offer.new(offer)}
+  end
+
 end 
 
 

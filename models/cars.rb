@@ -1,14 +1,16 @@
 require_relative('../db/sql_runner.rb')
+require('pry')
 
 
 class Car
 
-  attr_reader(:id ,:make,:model,:category, :price, :available,:dealer_id)
+  attr_reader(:id ,:make,:model,:img,:category, :price, :available,:dealer_id)
 
   def initialize( options )
     @id = options['id'].to_i 
     @make = options['make']
     @model = options['model']
+    @img = options['img']
     @category = options['category']
     @price = options['price']
     @available = options['available']
@@ -16,16 +18,16 @@ class Car
   end 
 
   def save()
-    sql = "INSERT INTO cars (make, model, category, price, available, dealer_id)
+    sql = "INSERT INTO cars (make, model, img , category, price, available, dealer_id)
     VALUES 
-    ('#{make}','#{model}','#{category}','#{price}','#{available}','#{dealer_id}')
+    ('#{make}','#{model}','#{img}','#{category}','#{price}','#{available}','#{dealer_id}')
     RETURNING *"
     result = SqlRunner.run(sql)
     @id = result.first()['id'].to_i 
   end
 
   def update
-    sql = "UPDATE cars SET make = '#{@make}', model = '#{@model}', category = #{@category}, available = '#{@available}', dealer_id = '#{@dealer_id}' WHERE id = #{@id}"
+    sql = "UPDATE cars SET make = '#{@make}', model = '#{@model}',img = '#{img}', category = '#{@category}', available = '#{@available}', dealer_id = '#{@dealer_id}' WHERE id = #{@id}"
     SqlRunner.run(sql)
   end
 

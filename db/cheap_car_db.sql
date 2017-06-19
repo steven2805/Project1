@@ -16,6 +16,7 @@ CREATE TABLE cars
   id SERIAL8 primary key,
   make VARCHAR(255), 
   model VARCHAR(255),
+  img VARCHAR(255),
   category VARCHAR(255),
   price INT8,
   available BOOLEAN,

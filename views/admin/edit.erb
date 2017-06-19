@@ -1,5 +1,8 @@
-<h2>Editing <%= @car.make %>  <%= @car.model %></h2>
-<form method="POST" action="/add_car<%= @car.id %>">
+<h2>Edit <%= @car.make + @car.model %></h2>
+<form method="POST" action="/admin/car/:car_id/edit">
+
+<label for="id"></label>
+<input type="hidden" name="id" id="id" value="<%= @car.id %>"/>
 
   
       <label for="make">make:</label>
@@ -7,6 +10,9 @@
 
       <label for="model">model:</label>
       <input type="text" name="model" id="model" value="<%= @car.model%>"/>
+
+      <label for="img">img:</label>
+      <input type="img" name="img" id="img" value="<%= @car.img%>"/>
 
       <label for="category">Category:</label> 
       <select name="category" id="category" selected="<%= @car.category  %>">
