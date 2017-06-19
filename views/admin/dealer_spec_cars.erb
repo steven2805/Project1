@@ -1,4 +1,4 @@
-<h1>Change this Steven link dealer name into here</h1>
+<h1>Change this link dealer name into here</h1>
 <table>
   <tr>
     <th>Make</th>
@@ -16,8 +16,18 @@
     <td><%= car.category %></td>
     <td>|</td>
     <td>
-      <form action="/admin/car/<%= car.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
-    </form>
+      <form action="/admin/car/<%= car.id %>/delete" method="POST">
+        <input type="submit" value="Delete">
+      </form>
+
+
+      <% car_id = car.id %>
+      <form action="/admin/car/<%= car_id %>/edit" method="GET">
+        <input type="submit" value="Edit Car">
+      </form>
+    </td>
+    <td>
+
     </td>
   </tr>
   <% end %>

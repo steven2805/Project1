@@ -25,10 +25,9 @@ class Car
   end
 
   def update
-    sql = "UPDATE cars SET make = '#{@make}', model= '#{@model}', category = #{@category}, available = '#{@available}', dealer_id '#{@dealer_id}' WHERE id = #{@id}"
+    sql = "UPDATE cars SET make = '#{@make}', model = '#{@model}', category = #{@category}, available = '#{@available}', dealer_id = '#{@dealer_id}' WHERE id = #{@id}"
     SqlRunner.run(sql)
   end
-
 
   def self.find(looking_for,id)
     sql = "SELECT * FROM cars WHERE #{looking_for} = #{id}"

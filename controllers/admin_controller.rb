@@ -14,20 +14,43 @@ get '/admin/dealer_spec_cars/:id/' do
   erb (:"admin/dealer_spec_cars")
 end 
 
+# car delete
+
 post '/admin/car/:id/delete' do
   General.delete_with_id("cars",params['id'])
   redirect to '/admin'
 end
+
+# dealer deleter 
 
 post '/admin/dealer/:id/delete' do
   General.delete_with_id("dealers",params['id'])
   redirect to '/admin'
 end 
 
+
 get '/admin/edit_cars' do
   @dealers = General.all('dealers','Dealer')
-  erb ( :'admin/edit_car')
+  erb ( :'/admin/edit_car')
 end
+
+get '/admin/car/:car_id/edit' do
+  @car = Car.find('id',params['car_id'])[0]
+  @current_dealer = Dealer.find('id', @car.dealer_id)
+  @dealers = General.all("dealers","Dealer")
+  #puts @car[0].inspect
+  erb (:'/admin/edit')
+end
+
+put '/admin/car/:car_id/edit' do
+  car = Car.new(params)
+  car.update
+  redirect to '/admin'
+end
+
+# ||||||||||||||Creating New databasew items|||||||||||||||
+
+# creating a new dealer
 
 get '/admin/new_dealer' do
   erb(:'admin/new_dealer')
@@ -38,21 +61,23 @@ post '/add_dealer' do
   redirect to '/admin'
 end
 
+# creating a new car
+
 get '/admin/new_car' do
   @dealers = General.all('dealers','Dealer')
   erb(:'admin/new_car')
 end
 
 post '/add_car' do
-  params['make'].capitalize
   Car.new(params).save
   redirect to '/admin'
 end
 
+# creating a new offer
+
 get '/admin/new_offer' do
   @cars = General.all('cars',"Car") 
   @dealers = General.all('dealers','Dealer')
-  
   erb(:'admin/new_offer')
 end
 
