@@ -6,12 +6,13 @@
     <th></th>
     <th>location</th>
     <th></th>
+    <th>Check out dealer</th>
   </tr>
   <% for dealer in @dealers %>
   <tr>
     <td><%= dealer.name %></td>
     <td>|</td>
-    <td><%= dealer.id %></td>
+    <td><%= dealer.address %></td>
     <td>|</td>
     <td>
     <form method="get" action="/dealers/<%= dealer.id %>/">
