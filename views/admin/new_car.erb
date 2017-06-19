@@ -1,13 +1,8 @@
 <h2>Add new car to database</h2>
 <form method="POST" action="/add_car">
 
-
   <label for="make">Make:</label>
   <input type="text" name="make" id="make"/>
-
-
-  <input type="file" value="Submit">
-
 
   <label for="model">Model:</label>
   <input type="text" name="model" id="model"/>
@@ -34,7 +29,6 @@
     <option value="false">Unavailable</option>
   </select>
 
-
   <label for="dealer_select">Select Dealer:</label> 
   <select name="dealer_id" id="dealer_select">
     <% @dealers.each do |dealer| %>
@@ -42,9 +36,7 @@
     <% end %>
   </select>
 
-
   <input type="submit" value="Add new car"/>
-
 
 
 </form>
