@@ -7,6 +7,7 @@ get '/cars' do
 end
 
 get '/cars/:search' do
+
   @cars = Car.find('id',params['search'])
   erb (:'cars/spec')
 end
