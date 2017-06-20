@@ -5,7 +5,7 @@ require_relative('../models/cars')
 require_relative('../models/general.rb')
 
 get '/offers' do
-  @offers = General.all("offers","Offer")
+  @offers = Offer.all()
   @cars = General.all("cars","Car")
   erb ( :"offers/index" )
 end

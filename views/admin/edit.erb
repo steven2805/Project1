@@ -1,49 +1,48 @@
 <h2>Edit <%= @car.make %>  <%=@car.model %></h2>
 <form method="POST" action="/admin/car/:car_id/edit">
 
-<label for="id"></label>
-<input type="hidden" name="id" id="id" value="<%= @car.id %>"/>
-
+  <label for="id"></label>
+  <input type="hidden" name="id" id="id" value="<%= @car.id %>"/>
   
-      <label for="make">make:</label>
-      <input type="text" name="make" id="make" value="<%= @car.make %>"/>
+  <label for="make">make:</label>
+  <input type="text" name="make" id="make" value="<%= @car.make %>"/>
 
-      <label for="model">model:</label>
-      <input type="text" name="model" id="model" value="<%= @car.model%>"/>
+  <label for="model">model:</label>
+  <input type="text" name="model" id="model" value="<%= @car.model%>"/>
 
-      <label for="img">img:</label>
-      <input type="img" name="img" id="img" value="<%= @car.img%>"/>
+  <label for="img">img:</label>
+  <input type="img" name="img" id="img" value="<%= @car.img%>"/>
 
-      <label for="category">Category:</label> 
-      <select name="category" id="category" selected="<%= @car.category  %>">
-        <option value="SUV">SUV</option>
-        <option value="Hatchback">Hatchback</option>
-        <option value="Saloon">Saloon</option>
-        <option value="MPV">MPV</option>
-        <option value="Convertible">Convertible</option>
-        <option value="Coupe">Coupe</option>
-        <option value="Supercar">Supercar</option>
-        <option value="Small Van">Small Van</option>
-        <option value="Large Van">Large Van</option>
-      </select>
+  <label for="category">Category:</label> 
+  <select name="category" id="category" selected="<%= @car.category  %>">
+    <option value="SUV">SUV</option>
+    <option value="Hatchback">Hatchback</option>
+    <option value="Saloon">Saloon</option>
+    <option value="MPV">MPV</option>
+    <option value="Convertible">Convertible</option>
+    <option value="Coupe">Coupe</option>
+    <option value="Supercar">Supercar</option>
+    <option value="Small Van">Small Van</option>
+    <option value="Large Van">Large Van</option>
+  </select>
 
-      <label for="price">Price:</label>
-      <input type="text" name="price" id="price" value="<%= @car.price%>"/>
+  <label for="price">Price:</label>
+  <input type="text" name="price" id="price" value="<%= @car.price%>"/>
 
-      <label for="available">Available:</label> 
-      <select name="available" id="available" value="<%= @car.available %>">
-        <option value="true">Available for rent</option>
-        <option value="false">Unavailable</option>
-      </select>
+  <label for="available">Available:</label> 
+  <select name="available" id="available" value="<%= @car.available %>">
+    <option value="true">Available for rent</option>
+    <option value="false">Unavailable</option>
+  </select>
 
-      <label for="dealer_select">Select Dealer:</label> 
-      <select name="dealer_id" id="dealer_select" value="<%= @car.dealer_id %>">
-        <% @dealers.each do |dealer| %>
-        <option value=<%= dealer.id %>><%= dealer.name.capitalize %></option>
-        <% end %>
-      </select>
-    
+  <label for="dealer_select">Select Dealer:</label> 
+  <select name="dealer_id" id="dealer_select" value="<%= @car.dealer_id %>">
+    <% @dealers.each do |dealer| %>
+    <option value=<%= dealer.id %>><%= dealer.name.capitalize %></option>
+    <% end %>
+  </select>
 
-      <input type="submit" value="Edit Car"/>
+
+  <input type="submit" value="Edit Car"/>
 
 </form>
