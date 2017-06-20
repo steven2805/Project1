@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner.rb')
+
+require_relative('../models/dealers.rb')
 require('pry')
 
 
@@ -37,7 +39,14 @@ class Car
     return results.map {|car| Car.new(car)}
   end
 
-end 
+  def self.dealer(id)
+    sql = "SELECT * FROM dealers WHERE id = #{id}"
+    results = SqlRunner.run( sql )
+    return results.map {|deal| Dealer.new(deal)}
+  end
+
+
+end
 
 
 

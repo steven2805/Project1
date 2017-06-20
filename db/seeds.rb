@@ -17,9 +17,14 @@ dealer2 = Dealer.new({
   'name' => "Cars everywhere",
   'address' => 'Glenrothes, KY1'
   }) 
+dealer3 = Dealer.new({
+  'name' => "Quick Cars",
+  'address' => 'Crail'
+  })
 
 dealer1.save 
 dealer2.save 
+dealer3.save
 
 
 car1 = Car.new({
@@ -81,6 +86,16 @@ car6 = Car.new({
   'available' => true,
   'dealer_id' => dealer2.id
  })
+car7 = Car.new({
+  'make' => "MERCEDES-BENZ",
+  'model' => "E Class",
+  'img' => 'MERCEDES_BENZ_Eclass.jpeg',
+  'category' => "Saloon",
+  'price' => 99,
+  'available' => true,
+  'dealer_id' => dealer3.id
+ })
+
 
 car1.save
 car2.save
@@ -88,6 +103,7 @@ car3.save
 car4.save
 car5.save
 car6.save
+car7.save
 
 offer1 = Offer.new({
   'name' => "#{car1.make}" + " #{car1.model} 10% off day",
