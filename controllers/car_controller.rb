@@ -10,9 +10,29 @@ end
 
 get '/cars/:search' do
   @cars = Car.find('id',params['search'])
+
+  @offer = Offer.find('car_id', params['search'])
+ @car = @cars.first 
+  puts @offer.first.value 
+
+  @car.final_price(@offer.first)
+
+
+ 
   @dealer = Car.dealer(@cars.first.dealer_id)
-  puts @dealer.inspect 
   erb (:'cars/spec')
 end
+
+
+
+
+
+
+
+
+
+
+
+
 
 

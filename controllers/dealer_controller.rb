@@ -11,7 +11,6 @@ end
 
 # Find all cars for a specific dealer
 
-
 get '/dealers/:id/' do
   @cars = Car.find('dealer_id',params['id'])
   erb (:"dealers/dealer_cars")

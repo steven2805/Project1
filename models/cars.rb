@@ -45,6 +45,10 @@ class Car
     return results.map {|deal| Dealer.new(deal)}
   end
 
+  def final_price(offer)
+    @price = @price.to_i - offer.value.to_i
+  end 
+
 
 end
 

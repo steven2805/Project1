@@ -6,24 +6,25 @@
 <div class="card">
   <img src="" alt="" style="width:100%">
   <div class="container">
-  <% for car in @cars %>
 
 
-  <img src="/images/<%= car.img %>" alt="car.img" 
+
+  <img src="/images/<%= @car.img %>" alt="car.img" 
 
   style="width:200px;height:150px;">
-    <h1><%= car.make %> <%= car.model %></h1>
-    <p class="title"><%= car.available %></p>
-    <p><%= car.category %></p>
+    <h1><%= @car.make %> <%= @car.model %> </h1>
+    <h1>( <%= @dealer.first.name %> )</h1>
+    <p class="title"><%= @car.available %></p>
+    <p><%= @car.category %></p>
 
 
-    <p>£<%= car.price %> per day</p>
+    <p>£<%= @car.price %> per day</p>
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a> 
     <a href="#"><i class="fa fa-linkedin"></i></a> 
     <a href="#"><i class="fa fa-facebook"></i></a> 
     <p><button>Order</button></p>
-    <% end  %>
+ 
 
   </div>
 </div>
