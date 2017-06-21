@@ -6,14 +6,10 @@
 <div class="card">
   <img src="" alt="" style="width:100%">
   <div class="container">
-
-
-
   <img src="/images/<%= @car.img %>" alt="car.img" 
-
   style="width:200px;height:150px;">
     <h1><%= @car.make %> <%= @car.model %> </h1>
-    <h1>( <%= @dealer.first.name %> )</h1>
+    <h1>(<%= @dealer.first.name %>)</h1>
     <p><%= @car.category %></p>
 
    <p>Original price : £<%= @original_price %></p>
@@ -23,7 +19,5 @@
     <a href="#"><i class="fa fa-linkedin"></i></a> 
     <a href="#"><i class="fa fa-facebook"></i></a> 
     <p><button>Order</button></p>
- 
-
   </div>
 </div>

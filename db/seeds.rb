@@ -19,7 +19,7 @@ dealer2 = Dealer.new({
   }) 
 dealer3 = Dealer.new({
   'name' => "Quick Cars",
-  'address' => 'Crail'
+  'address' => 'Crail, KY10'
   })
 
 dealer1.save 
@@ -70,7 +70,7 @@ car4 = Car.new({
 car5 = Car.new({
   'make' => "Subaru",
   'model' => "XV",
-  'img' => 'Subaru_xv.jpg',
+  'img' => 'Subaru_XV.jpg',
   'category' => "SUV",
   'price' => 45,
   'available' => true,
@@ -80,7 +80,7 @@ car5 = Car.new({
 car6 = Car.new({
   'make' => "BMW",
   'model' => "M3",
-  'img' => 'Ford_capri.jpg',
+  'img' => 'BMW_M3.jpg',
   'category' => "Sport",
   'price' => 70,
   'available' => true,
@@ -96,6 +96,17 @@ car7 = Car.new({
   'dealer_id' => dealer3.id
  })
 
+car8 = Car.new({
+  'make' => "Volkswagen",
+  'model' => "Scirocco",
+  'img' => 'VWS.jpg',
+  'category' => "Sport",
+  'price' => 42,
+  'available' => true,
+  'dealer_id' => dealer3.id
+ })
+
+
 
 car1.save
 car2.save
@@ -104,9 +115,10 @@ car4.save
 car5.save
 car6.save
 car7.save
+car8.save 
 
 offer1 = Offer.new({
-  'name' => "#{car1.make}" + " #{car1.model} 10% off day",
+  'name' => "#{car1.make}" + " #{car1.model} £10 off day",
   'value' => 10,
   'day' => "Sunday",
   'car_id' => car1.id,
@@ -114,7 +126,7 @@ offer1 = Offer.new({
   })
 
 offer2 = Offer.new({
-  'name' => "#{car3.make}" + " #{car3.model}  10% off",
+  'name' => "#{car3.make}" + " #{car3.model}  £10 off",
   'value' => 10,
   'day' => "Monday",
   'car_id' => car3.id,
@@ -122,20 +134,25 @@ offer2 = Offer.new({
   })
 
 offer3 = Offer.new({
-  'name' => "#{car5.make}" + " #{car5.model}  Sale massive 24% off",
+  'name' => "#{car5.make}" + " #{car5.model}  Sale massive £££ off",
   'value' => 10,
   'day' => "Tuesday",
   'car_id' => car5.id,
   'dealers_id' => car5.dealer_id
   })
 
+offer4 = Offer.new({
+  'name' => "#{car8.make}" + " #{car8.model}  Sale massive £££ off",
+  'value' => 24,
+  'day' => "Wednesday",
+  'car_id' => car8.id,
+  'dealers_id' => car3.dealer_id
+  })
+
 
 offer1.save
 offer2.save 
 offer3.save 
-
-binding.pry 
-nil 
-
+offer4.save
 
 
