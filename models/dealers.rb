@@ -2,7 +2,6 @@ require_relative('../db/sql_runner')
 
 
 class Dealer
-
   attr_reader(:id, :name, :address)
 
   def initialize( options )

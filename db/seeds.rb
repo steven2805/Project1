@@ -32,7 +32,7 @@ car1 = Car.new({
   'model' => "Capri",
   'img' => 'Ford_capri.jpg',
   'category' => "Vintage",
-  'price' => 60,
+  'price' => 45,
   'available' => true,
   'dealer_id' => dealer1.id
  })
@@ -52,7 +52,7 @@ car3 = Car.new({
   'model' => "RX7",
   'img' => 'Mazda_RX7.jpg',  
   'category' => "Sport",
-  'price' => 70,
+  'price' => 45,
   'available' => true,
   'dealer_id' => dealer1.id
  })
@@ -62,7 +62,7 @@ car4 = Car.new({
   'model' => "RX8",
   'img' => 'Mazda_RX8.jpg',
   'category' => "Sport",
-  'price' => 82,
+  'price' => 30,
   'available' => true,
   'dealer_id' => dealer2.id
  })
@@ -72,7 +72,7 @@ car5 = Car.new({
   'model' => "XV",
   'img' => 'Subaru_xv.jpg',
   'category' => "SUV",
-  'price' => 49,
+  'price' => 45,
   'available' => true,
   'dealer_id' => dealer2.id
  })
@@ -82,7 +82,7 @@ car6 = Car.new({
   'model' => "M3",
   'img' => 'Ford_capri.jpg',
   'category' => "Sport",
-  'price' => 110,
+  'price' => 70,
   'available' => true,
   'dealer_id' => dealer2.id
  })
@@ -91,7 +91,7 @@ car7 = Car.new({
   'model' => "E Class",
   'img' => 'MERCEDES_BENZ_Eclass.jpeg',
   'category' => "Saloon",
-  'price' => 99,
+  'price' => 60,
   'available' => true,
   'dealer_id' => dealer3.id
  })
