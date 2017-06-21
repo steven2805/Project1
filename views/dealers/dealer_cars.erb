@@ -6,6 +6,7 @@
     <th>Model</th>
     <th></th>
     <th>Category</th>
+    <th>Select Car</th>
   </tr>
   <% for car in @cars %>
   <tr>
@@ -14,6 +15,11 @@
     <td><%= car.model %></td>
     <td>|</td>
     <td><%= car.category %></td>
+    <td>
+      <form method="get" action="/cars/<%= car.id %>">
+        <input type="submit" value="Check out car offer">
+      </form>
+    </td>
   </tr>
   <% end %>
 </table>

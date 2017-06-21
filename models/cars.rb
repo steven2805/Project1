@@ -47,8 +47,12 @@ class Car
   end
 
   def final_price(offer)
+    if offer == nil 
+      return 
+    else
     @price = @price.to_i - offer.value.to_i
   end 
+end 
 
 
 end
