@@ -70,6 +70,7 @@ get '/admin/new_car' do
 end
 
 post '/add_car' do
+  puts params.inspect 
   Car.new(params).save
   redirect to '/admin'
 end

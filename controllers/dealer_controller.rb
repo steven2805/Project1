@@ -13,6 +13,9 @@ end
 
 get '/dealers/:id/' do
   @cars = Car.find('dealer_id',params['id'])
+  @dealer = Car.dealer(@cars.first.dealer_id)
+  @dealer_first = @dealer.first
+  puts @dealer_first.inspect 
   erb (:"dealers/dealer_cars")
 end 
 

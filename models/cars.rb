@@ -17,6 +17,7 @@ class Car
     @price = options['price']
     @available = options['available']
     @dealer_id = options['dealer_id'].to_i
+
   end 
 
   def save()
