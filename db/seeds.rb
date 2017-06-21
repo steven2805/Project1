@@ -10,11 +10,11 @@ General.delete_all("dealers")
 
 
 dealer1 = Dealer.new({
-  'name' => "Decent cars",
+  'name' => "Decent Cars",
   'address' => 'Kirkcaldy, KY2 '
   }) 
 dealer2 = Dealer.new({
-  'name' => "Cars everywhere",
+  'name' => "Cars Everywhere",
   'address' => 'Glenrothes, KY1'
   }) 
 dealer3 = Dealer.new({
@@ -32,16 +32,16 @@ car1 = Car.new({
   'model' => "Capri",
   'img' => 'Ford_capri.jpg',
   'category' => "Vintage",
-  'price' => 67,
+  'price' => 60,
   'available' => true,
   'dealer_id' => dealer1.id
  })
 
 car2 = Car.new({
   'make' => "Ford",
-  'model' => "Ka",
-  'img' => 'Ford_Ka.jpg',
-  'category' => "Compact",
+  'model' => "Mondea",
+  'img' => 'ford_mondeo.jpg',
+  'category' => "Saloon",
   'price' => 25,
   'available' => true,
   'dealer_id' => dealer1.id
@@ -49,7 +49,7 @@ car2 = Car.new({
 
 car3 = Car.new({
   'make' => "Mazda",
-  'model' => "RX",
+  'model' => "RX7",
   'img' => 'Mazda_RX7.jpg',  
   'category' => "Sport",
   'price' => 70,
