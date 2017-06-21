@@ -14,11 +14,10 @@
   style="width:200px;height:150px;">
     <h1><%= @car.make %> <%= @car.model %> </h1>
     <h1>( <%= @dealer.first.name %> )</h1>
-    <p class="title"><%= @car.available %></p>
     <p><%= @car.category %></p>
 
-   
-    <p>£<%= @car.price %> per day</p>
+   <p>Original price : £<%= @original_price %></p>
+    <h2><p>£<%= @car.price %> per day</p></h2>
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a> 
     <a href="#"><i class="fa fa-linkedin"></i></a> 

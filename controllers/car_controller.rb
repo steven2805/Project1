@@ -11,6 +11,7 @@ end
 get '/cars/:search' do
   @cars = Car.find('id',params['search'])
   @offer = Offer.find('car_id', params['search'])
+  @original_price = @cars.first.price 
   @car = @cars.first 
   @car.final_price(@offer.first)
   @dealer = Car.dealer(@cars.first.dealer_id)
