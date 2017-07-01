@@ -13,7 +13,6 @@ class Offer
     @dealers_id = options['dealers_id']
   end
 
-
   def save()
     sql = "INSERT INTO offers (name, value, day, car_id, dealers_id) 
     VALUES ('#{name}','#{value}','#{day}','#{car_id}','#{dealers_id}')
@@ -33,8 +32,4 @@ class Offer
     results = SqlRunner.run( sql )
     return results.map {|offer| Offer.new(offer)}
   end
-
 end 
-
-
-

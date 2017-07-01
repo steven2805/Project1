@@ -4,7 +4,7 @@ require_relative( '../models/cars.rb')
 require_relative('../models/dealers.rb')
 
 get '/admin' do
-  erb ( :'admin/index')
+  erb (:'admin/index')
 end
 
 # used to get the dealer specific cars, used within the delete function

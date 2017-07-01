@@ -3,7 +3,6 @@ require_relative('../db/sql_runner.rb')
 require_relative('../models/dealers.rb')
 require('pry')
 
-
 class Car
 
   attr_reader(:id ,:make,:model,:img,:category, :price, :available,:dealer_id)
@@ -17,7 +16,6 @@ class Car
     @price = options['price']
     @available = options['available']
     @dealer_id = options['dealer_id'].to_i
-
   end 
 
   def save()
@@ -50,23 +48,8 @@ class Car
     if offer == nil 
       return 
     else
-    @price = @price.to_i - offer.value.to_i
+      @price = @price.to_i - offer.value.to_i
+    end 
   end 
-end 
-
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-

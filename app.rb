@@ -5,7 +5,6 @@ require_relative('controllers/dealer_controller.rb')
 require_relative('controllers/car_controller.rb')
 require_relative('controllers/admin_controller.rb')
 
-
 get '/' do 
 erb (:index)
 end

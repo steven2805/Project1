@@ -17,17 +17,3 @@ get '/cars/:search' do
   @dealer = Car.dealer(@cars.first.dealer_id)
   erb (:'cars/spec')
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-

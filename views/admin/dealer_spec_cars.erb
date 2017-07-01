@@ -6,7 +6,7 @@
     <th>Model</th>
     <th></th>
     <th>Category</th>
-   <center><th>Delete</th></center>
+    <center><th>Delete</th></center>
   </tr>
   <% for car in @cars %>
   <tr>
@@ -15,7 +15,6 @@
     <td><%= car.model %></td>
     <td>|</td>
     <td><%= car.category %></td>
-
     <td>
       <form action="/admin/car/<%= car.id %>/delete" method="POST">
         <input type="submit" value="Delete">
@@ -28,4 +27,3 @@
   </tr>
   <% end %>
 </table>
-

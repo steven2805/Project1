@@ -15,16 +15,10 @@
     <td><%= dealer.address %></td>
     <td>|</td>
     <td>
-    <form method="get" action="/dealers/<%= dealer.id %>/">
+      <form method="get" action="/dealers/<%= dealer.id %>/">
         <input type="submit" value="Check out dealers cars">
-    </form>
-      </td>
-    </tr>
-    <% end %>
-  </table>
-
-
-
-
-
-
+      </form>
+    </td>
+  </tr>
+  <% end %>
+</table>

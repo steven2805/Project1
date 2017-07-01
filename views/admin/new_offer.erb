@@ -1,14 +1,10 @@
 <h2>Make a new offer</h2>
 <form method="POST" action="/add_offer">
 
-
   <label for="name">Offer name:</label>
   <input type="text" name="name" id="name"/>
-
-
   <label for="value">Discount £:</label>
   <input type="text" name="value" id="value"/>
-
   <label for="day">What day is the deal on:</label> 
   <select name="day" id="day">
     <option value="Monday">Monday</option>
@@ -27,11 +23,5 @@
     else
     <% end %>
   </select>
-
- 
-
   <input type="submit" value="Add new offer"/>
-
-
-
 </form>

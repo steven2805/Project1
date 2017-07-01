@@ -1,5 +1,4 @@
 require_relative('../db/sql_runner')
-require_relative( '../models/dealers.rb')
 
 
 class General

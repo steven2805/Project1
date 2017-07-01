@@ -8,7 +8,6 @@ General.delete_all("offers")
 General.delete_all("cars")
 General.delete_all("dealers")
 
-
 dealer1 = Dealer.new({
   'name' => "Decent Cars",
   'address' => 'Kirkcaldy, KY2 '
@@ -25,7 +24,6 @@ dealer3 = Dealer.new({
 dealer1.save 
 dealer2.save 
 dealer3.save
-
 
 car1 = Car.new({
   'make' => "Ford",
@@ -106,8 +104,6 @@ car8 = Car.new({
   'dealer_id' => dealer3.id
  })
 
-
-
 car1.save
 car2.save
 car3.save
@@ -149,10 +145,7 @@ offer4 = Offer.new({
   'dealers_id' => car3.dealer_id
   })
 
-
 offer1.save
 offer2.save 
 offer3.save 
 offer4.save
-
-

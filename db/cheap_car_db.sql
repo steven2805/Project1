@@ -2,14 +2,12 @@ DROP TABLE IF EXISTS offers;
 DROP TABLE IF EXISTS cars;
 DROP TABLE IF EXISTS dealers;
 
-
 CREATE TABLE dealers
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
   address VARCHAR(255)
 );
-
 
 CREATE TABLE cars
 (
@@ -32,10 +30,3 @@ CREATE TABLE offers
   car_id INT8 REFERENCES cars(id) ON DELETE CASCADE,
   dealers_id INT8 
 );
-
-
-
-
-
-
-

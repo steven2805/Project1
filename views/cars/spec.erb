@@ -1,18 +1,15 @@
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/styles/card.css">
 
 <div class="card">
   <img src="" alt="" style="width:100%">
   <div class="container">
-  <img src="/images/<%= @car.img %>" alt="car.img" 
-  style="width:200px;height:150px;">
+    <img src="/images/<%= @car.img %>" alt="car.img" 
+    style="width:200px;height:150px;">
     <h1><%= @car.make %> <%= @car.model %> </h1>
     <h1>(<%= @dealer.first.name %>)</h1>
     <p><%= @car.category %></p>
-
-   <p>Original price : £<%= @original_price %></p>
+    <p>Original price : £<%= @original_price %></p>
     <h2><p>£<%= @car.price %> per day</p></h2>
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a> 

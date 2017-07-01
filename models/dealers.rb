@@ -1,6 +1,5 @@
 require_relative('../db/sql_runner')
 
-
 class Dealer
   attr_reader(:id, :name, :address)
 
@@ -25,13 +24,3 @@ class Dealer
   end  
 
 end 
-
-
-
-
-
-
-
-
-
-

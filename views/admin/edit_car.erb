@@ -4,33 +4,33 @@
   <title>Editing/Deleting Car</title>
 </head>
 <body>
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>location</th> 
-    <th></th>
-    <th>Edit/delete car via dealer</th>
-    <th></th>
-    <th>Delete dealer</th>
-  </tr>
-  <% for dealer in @dealers %>
-  <tr>
-  <td></td>
-    <td><%= dealer.name %></td>
-<td></td>
-    <td><%= dealer.address %></td>
-    <td>
-      <form method="get" action="/admin/dealer_spec_cars/<%= dealer.id %>/">
-        <input type="submit" value="Edit/Delete via dealer">
-      </form>
-    </td>
-    <td></td>
-    <td>   
-      <form action="/admin/dealer/<%= dealer.id %>/delete" method="POST"><input type="submit" value="Delete Dealer (Warning)"></form>
-    </td>
-  </tr>
-  <% end %>
-</table>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th>location</th> 
+      <th></th>
+      <th>Edit/delete car via dealer</th>
+      <th></th>
+      <th>Delete dealer</th>
+    </tr>
+    <% for dealer in @dealers %>
+    <tr>
+      <td></td>
+      <td><%= dealer.name %></td>
+      <td></td>
+      <td><%= dealer.address %></td>
+      <td>
+        <form method="get" action="/admin/dealer_spec_cars/<%= dealer.id %>/">
+          <input type="submit" value="Edit/Delete via dealer">
+        </form>
+      </td>
+      <td></td>
+      <td>   
+        <form action="/admin/dealer/<%= dealer.id %>/delete" method="POST"><input type="submit" value="Delete Dealer (Warning)"></form>
+      </td>
+    </tr>
+    <% end %>
+  </table>
 </body>
 </html>
